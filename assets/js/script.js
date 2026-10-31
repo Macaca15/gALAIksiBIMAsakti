@@ -163,7 +163,14 @@ window.addEventListener("load", () => {
   
   // 1. Tampilkan ucapan saat web pertama dibuka
   loadUcapan();
-
+  // Inisialisasi Masonry setelah semua gambar selesai dimuat
+  const galeri = document.querySelector('#galeri-masonry');
+  if (galeri) {
+    new Masonry(galeri, {
+      percentPosition: true
+    });
+  }
+  
   // 2. RSVP Form Handler
   const rsvpForm = document.getElementById('rsvp-form');
   if (rsvpForm) {
