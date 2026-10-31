@@ -139,7 +139,7 @@ async function loadUcapan() {
     // Reverse array agar ucapan terbaru berada di paling atas
     data.reverse().forEach(item => {
       const wishItemHTML = `
-        <div class="wish-item p-3 mb-3 border rounded shadow-sm bg-white" data-aos="fade-up">
+        <div class="wish-item p-3 mb-3 border rounded shadow-sm bg-white">
           <div class="d-flex justify-content-between align-items-center mb-2">
             <h6 class="fw-bold mb-0 text-pink"><i class="fas fa-user-circle me-1"></i> ${item.nama}</h6>
             <small class="text-muted" style="font-size: 0.75rem;"><i class="fas fa-clock"></i> ${item.tanggal}</small>
