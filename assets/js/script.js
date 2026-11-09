@@ -94,8 +94,8 @@ if (namaSambutan) {
 const kodeKhusus = urlParams.get('k');
 const sesiKhusus = document.getElementById('sesi-khusus');
 
-// Jika kodenya adalah "keluarga", maka hapus class d-none agar bagian tersebut muncul
-if (kodeKhusus === 'keluarga' && sesiKhusus) {
+// Jika kodenya adalah "1", maka hapus class d-none agar bagian tersebut muncul
+if (kodeKhusus === '1' && sesiKhusus) {
   sesiKhusus.classList.remove('d-none');
 }
 
@@ -163,14 +163,7 @@ window.addEventListener("load", () => {
   
   // 1. Tampilkan ucapan saat web pertama dibuka
   loadUcapan();
-  // Inisialisasi Masonry setelah semua gambar selesai dimuat
-  const galeri = document.querySelector('#galeri-masonry');
-  if (galeri) {
-    new Masonry(galeri, {
-      percentPosition: true
-    });
-  }
-  
+
   // 2. RSVP Form Handler
   const rsvpForm = document.getElementById('rsvp-form');
   if (rsvpForm) {
