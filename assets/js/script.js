@@ -90,15 +90,23 @@ if (namaSambutan) {
   namaSambutan.innerText = `${pronoun} ${name},`;
 }
 // Logika Memunculkan Bagian Khusus Pemangku Hajat
-// Mengambil parameter 'k' dari URL (contoh: ?k=keluarga)
+// Mengambil parameter 'k' dari URL (contoh: ?k=1)
 const kodeKhusus = urlParams.get('k');
-const sesiKhusus = document.getElementById('sesi-khusus');
+const sesiKhusus = document.getElementById('sesi-pemangku');
+const acara1 = document.getElementById('acara-section1');
+const acara2 = document.getElementById('acara-section2');
 
 // Jika kodenya adalah "1", maka hapus class d-none agar bagian tersebut muncul
-if (kodeKhusus === '1' && sesiKhusus) {
+if (kodeKhusus === '1' && sesiKhusus && acara1) {
   sesiKhusus.classList.remove('d-none');
+  acara1.classList.remove('d-none');
 }
-
+if (kodeKhusus === '2' && sesiKhusus && acara1) {
+  acara1.classList.remove('d-none');
+}
+if (kodeKhusus === '3' && sesiKhusus && acara2) {
+  acara2.classList.remove('d-none');
+}
 // Fungsi Copy Text (Clipboard API)
 function copyText(el) {
   const content = jQuery(el).siblings('div.card-container').find('div.card-number').text().trim().replace(/\s+/g, '');
