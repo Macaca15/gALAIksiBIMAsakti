@@ -95,6 +95,7 @@ const kodeKhusus = urlParams.get('k');
 const sesiKhusus = document.getElementById('sesi-pemangku');
 const acara1 = document.getElementById('acara-section1');
 const acara2 = document.getElementById('acara-section2');
+const acara3 = document.getElementById('acara-section3');
 
 // Jika kodenya adalah "1", maka hapus class d-none agar bagian tersebut muncul
 if (kodeKhusus === '1' && sesiKhusus && acara1) {
@@ -106,6 +107,10 @@ if (kodeKhusus === '2' && sesiKhusus && acara1) {
 }
 if (kodeKhusus === '3' && sesiKhusus && acara2) {
   acara2.classList.remove('d-none');
+}
+if (kodeKhusus === '4' && sesiKhusus && acara3) {
+  sesiKhusus.classList.remove('d-none');
+  acara3.classList.remove('d-none');
 }
 // Fungsi Copy Text (Clipboard API)
 function copyText(el) {
