@@ -115,7 +115,7 @@ if (kodeKhusus === '4' && sesiKhusus && acara3) {
 }
 if (kodeKhusus === '5' && sesiKhusus && acara4) {
   sesiKhusus.classList.remove('d-none');
-  acara3.classList.remove('d-none');
+  acara4.classList.remove('d-none');
 }
 // Fungsi Copy Text (Clipboard API)
 function copyText(el) {
